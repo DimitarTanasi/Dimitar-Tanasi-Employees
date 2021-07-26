@@ -1,0 +1,31 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+<div>
+    <div >
+        <div class="container">
+            <div>
+                <h1 >Find Result</h1>
+            </div>
+
+            <form th:action="@{/employees}" method="post">
+                <div >
+                    <label for="employees-textarea">Data:</label>
+                </div>
+                <div >
+                    <div >
+                        <textarea class="form-control" id="employees-textarea" rows="10" th:text="${employees}" name="employees" readonly></textarea>
+                    </div>
+                </div>
+                <div >
+                    <button >Print Result in the Console</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
